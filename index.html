@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Scoundrel!</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js" defer></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="top">
+                <h1 class="gTitle">Scoundrel</h1>
+                <h4 class="rulesLink"><a href="https://rpdillon.net/scoundrel.html">How to play</a></h4>
+                <div class="stats">
+                    <div class="stat">
+                        <span class="statIcon">❤️</span>
+                        <span class="statValue" id="health">20</span>
+                        <span class="statIcon">🏆</span>
+                        <span class="statValue" id="score">0</span>
+                    </div>
+                </div>
+            </div>
+            <div class="board">
+                <div class="section">
+                    <div class="sectionTitle">Deck</div>
+                    <div class="cardHolder">
+                        <div class="deckHolder" id="deck">
+                            <div class="deckBack"></div>
+                            <div class="deckNum" id="deckNum">44</div>
+                        </div>
+                        <div class="textBox" id="textBox">
+                            Click "Start Game" to begin!
+                        </div>
+                    </div>
+                </div>
+                <div class="section">
+                    <div class="sectionTitle">Room</div>
+                    <div class="cardHolder" id="roomHolder"></div>
+                </div>
+                <div class="section">
+                    <div class="sectionTitle">Weapon + Kill Tree</div>
+                    <div class="cardHolder">
+                        <div id="weapon" class="card cardPlace">Weapon</div>
+                        <div id="killTree" class="cardHolder"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="controls">
+                <button id="startBtn" class="btn">Start Game</button>
+                <button id="discardWeaponBtn" class="btn" disabled>Discard Weapon</button>
+                <button id="enterRoomBtn" class="btn">Enter Room</button>
+                <button id="runBtn" class="btn" disabled>Run</button>
+                <button id="resetBtn" class="btn">Reset Game</button>
+            </div>
+            
+        </div>
+        <div class="gameOver" id="gameOver">
+            <div class="gameOverScreen">
+                <h2 class="gameOverScream" id="gameOverScream">Game Over</h2>
+                <p id="gameOverMsg">You have been defeated!</p>
+                <button id="restartBtn" class="btn">Play Again</button>
+            </div>
+        </div>
+</html>

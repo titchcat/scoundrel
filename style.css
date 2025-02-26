@@ -1,0 +1,239 @@
+:root {
+    --primary-color: #3a0ca3;
+    --secondary-color: #7209b7;
+    --accent-color: #f72585;
+    --light-color: #f2f4f6;
+    --dark-color: #1a1a2e;
+}
+
+body {
+    font-family: 'Comic Sans MS', sans-serif;
+    background-color: #222639;
+    color: var(--light-color);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+}
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: var(--primary-color);
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.gTitle {
+    font-size: 30px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.rulesLink {
+    font-size: 30px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    color: var(--accent-color);
+}
+
+.stats {
+    display: flex;
+    gap: 20px
+}
+
+.stat {
+    display: flex;
+    align-items: center;
+    gap: 10px
+}
+.statIcon {
+    font-size: 24px;
+}
+.statValue {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+.board {
+    display: grid;
+    grid-template-rows: auto auto auto;
+    gap: 30px;
+    margin-bottom: 30px
+}
+
+.section {
+    background-color: rgba(26, 26, 46, 0.7);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.sectionTitle {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: var(--accent-color);
+}
+
+.cardHolder {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    min-height: 150px;
+}
+.card {
+    width: 100px;
+    height: 140px;
+    background-color: var(--light-color);
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #000
+}
+.card:hover {
+    transform: translateY(-10px)
+}
+.cardValue {
+    font-size: 24px;
+    font-weight: bold
+}
+.cardSuit {
+    font-size: 30px;
+}
+
+.suit-S, .suit-C {
+    color: #000
+}
+.suit-H, .suit-D {
+    color: #e63946
+}
+
+.controls {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 20px
+}
+
+.btn {
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 24px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: var(--accent-color);
+}
+
+.btn:disabled {
+    background-color: #666;
+    cursor: not-allowed;
+}
+
+.textBox {
+    background-color: rgba(26, 26, 46, 0.9);
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: 20px;
+    min-height: 50px;
+    text-align: center;
+}
+
+.gameOver {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    display: none;
+}
+
+.gameOverContent {
+    background-color: var(--dark-color);
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    max-width: 500px;
+}
+
+.gameOverTitle {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: var(--accent-color);
+}
+
+.hidden {
+    display: none;
+}
+
+.deckNum {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: var(--accent-color);
+    color: white;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.deckHolder {
+    width: 100px;
+    height: 140px;
+    background-color: var(--primary-color);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.cardBack {
+    background-color: var(--primary-color);
+    background-image: repeating-linear-gradient(
+        45deg,
+        rgba(255, 255, 255, 0.1),
+        rgba(255, 255, 255, 0.1) 10px,
+        transparent 10px,
+        transparent 20px
+    );
+}
+
+.cardPlace {
+    border: 2px dashed rgba(255, 255, 255, 0.3);
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.5);
+}
